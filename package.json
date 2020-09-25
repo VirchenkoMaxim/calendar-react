@@ -18,6 +18,10 @@
     "reactjs-popup": "^2.0.4",
     "redux": "^4.0.5"
   },
+  "engines": {
+    "npm": "5.7.1",
+    "yarn": "1.22.5"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
