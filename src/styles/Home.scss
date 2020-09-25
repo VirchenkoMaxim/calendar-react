@@ -1,0 +1,51 @@
+@import "variables";
+
+.content-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: -40px 0;
+  height: calc(100vh - 150px);
+  width: 100%;
+  background-image: url("../assets/img/background.jpg");
+  background-position: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .text-wrapper {
+    height: 480px;
+  }
+  .title {
+    text-align: right;
+    font-size: 50px;
+    color: $base-color;
+    text-transform: uppercase;
+  }
+  .text {
+    text-align: right;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    color: #dfdfdf;
+  }
+}
+.calendar-wrapper {
+  color: #dfdfdf;
+  background-color: #272829;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .calendar-wrapper {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-wrapper .title {
+    font-size: 30px;
+    .text {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../../styles/variables.scss";
+
+.modal {
+  &_container {
+    width: 100%;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal-content {
+    border-radius: 0;
+  }
+  &_btn {
+    display: flex;
+    float: right;
+    margin: -16px -16px 0 0;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $base-color;
+    background-color: $base-color;
+    background-image: url("../../../assets/icons/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:focus {
+      border: inherit;
+      outline: none;
+    }
+  }
+  &_item {
+    width: 98%;
+    & > label {
+      color: #a2a2a2;
+      font-size: 20px;
+    }
+    & > input {
+      width: 100%;
+      font-size: 22px;
+      border: 2px solid $base-color;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modal_container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,96 @@
+@import "../../../styles/variables.scss";
+
+.calendar {
+  max-width: 460px;
+  &_btn {
+    width: 10px;
+    height: 20px;
+    border: none;
+    background: none;
+    background-image: url("../../../assets/icons/arrow.png");
+    background-position: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:focus {
+      outline: none;
+    }
+  }
+  &_btn-next {
+    transform: scaleX(-1);
+  }
+  &_header {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(252, 252, 252, 0.5);
+    padding-bottom: 20px;
+    & > div {
+      font-size: 19px;
+      text-transform: uppercase;
+    }
+  }
+  &_table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin: auto;
+  }
+
+  .day {
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 15px 15px;
+    vertical-align: middle;
+    text-align: center;
+    border: 2px solid transparent;
+  }
+  .day.selected {
+    box-sizing: border-box;
+    position: relative;
+    &:after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      border: 1px solid $base-color;
+      height: 5px;
+      width: 5px;
+      border-radius: 10px;
+      background-color: $base-color;
+      top: 75%;
+      left: 46%;
+    }
+  }
+  .day.today {
+    background: $base-color 0% 0% no-repeat padding-box;
+    color: #000;
+  }
+  .day.today.selected {
+    border: 2px solid lightgray;
+  }
+  &_footer {
+    padding: 12px 6px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(252, 252, 252, 0.5);
+    border-top: 1px solid rgba(252, 252, 252, 0.5);
+    td {
+      vertical-align: middle;
+      text-align: center;
+      height: 36px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .calendar_table {
+    border-spacing: 0;
+    .day {
+      padding: 15px 5px;
+    }
+  }
+}
